@@ -11,13 +11,13 @@
 
 В каталоге с программой необходимо создать файл .env со значениями переменных
 
-BASE_HOST= IP-адрес
-BASE_PORT= порт 
-BASE_NAME='название базы данных'
-BASE_USER='имя пользователя базы'
-BASE_USER_PASSWORD='пароль пользователя базы'
-SECRET_KEY ='секретный ключ'
-DJANGO_DEBUG = True
+BASE_HOST= IP-адрес <br>
+BASE_PORT= порт <br>
+BASE_NAME='название базы данных' <br>
+BASE_USER='имя пользователя базы' <br>
+BASE_USER_PASSWORD='пароль пользователя базы' <br>
+SECRET_KEY ='секретный ключ' <br>
+DJANGO_DEBUG = True <br>
 
 
 * или DJANGO_DEBUG = False,в зависимости от задач
