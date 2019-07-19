@@ -17,7 +17,7 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True if os.getenv('DJANGO_DEBUG').lower() =='true' else False
+DEBUG = os.getenv('DJANGO_DEBUG').lower() =='true'
 
 
 ROOT_URLCONF = "project.urls"
@@ -34,10 +34,10 @@ TEMPLATES = [
     },
 ]
 
-# USE_L10N = True
-USE_L10N = False
+
+
 
 TIME_ZONE = 'Europe/Moscow'
 
-USE_TZ = False
+USE_TZ = True
 LANGUAGE_CODE = 'ru-ru'
