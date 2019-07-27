@@ -7,24 +7,17 @@ from datacenter.utilites import is_visit_long
 import datetime
 
 
-
-
 def passcard_info_view(request, passcode):
-    
+
     passcard = Passcard.objects.filter(passcode=passcode)[0]
     user_visits = Visit.objects.filter(passcard=passcard)
-    this_passcard_visits=[]
+    this_passcard_visits = []
     for visit in user_visits:
-      visiter={}
-      visiter["entered_at"]=visit.entered_at
-      visiter["duration"] = str(get_duration(visit))
-      visiter["is_strange"] =is_visit_long(get_duration(visit))
-      this_passcard_visits.append(visiter)
-    
-
-
-
-
+        visiting = {}
+        visiting["entered_at"] = visit.entered_at
+        visiting["duration"] = str(get_duration(visit))
+        visiting["is_strange"] = is_visit_long(get_duration(visit))
+        this_passcard_visits.append(visiting)
 
     context = {
         "passcard": passcard,
